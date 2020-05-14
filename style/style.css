@@ -1,0 +1,424 @@
+ *, p {
+   margin: 0;
+   padding: 0;
+ }
+
+ .main {
+   background-image: url("../images/Desktop_cropped1050.png");
+   width: 100vw;
+   height: 100vh;
+   background-size: contain;
+   background-position: center;
+   background-repeat: no-repeat;
+   position: relative;
+ }
+
+ .first-section {
+   width: 100vw;
+   height: 100vh;
+   background: url("../images/Rectangle 6.png");
+   background-position: center;
+   background-repeat: no-repeat;
+   animation: main_page-shadow 2s 3s forwards;
+   opacity: 0;
+ }
+
+ @keyframes main_page-shadow {
+   from {
+     opacity: 0;
+   }
+   to {
+     opacity: 1;
+   }
+ }
+
+ .cup-hoist {
+   width: 100vw;
+   height: 93vh;
+   background-image: url("../images/Cup_Hoist.png");
+   background-repeat: no-repeat;
+   animation: cup-shows 1s 3s forwards;
+   background-size: contain;
+   background-position: center;
+   position: relative;
+   opacity: 0;
+ }
+
+ @keyframes cup-shows {
+   from {
+     top: 100vh;
+     opacity: 1;
+   }
+   to {
+     top: 7vh;
+     opacity: 1;
+   }
+ }
+
+ .main_close-button {
+   position: absolute;
+   right: 2%;
+   top: 2%;
+   background-image: url("../images/Main Close Btn.png");
+   background-size: contain;
+   width: 30px;
+   height: 30px;
+   background-color: transparent;
+   border: none;
+   cursor: pointer;
+   opacity: 1;
+   animation: close-button-appear 0.5s 3s forwards;
+   z-index: 999;
+ }
+
+ @keyframes close-button-appear {
+   from {
+     opacity: 0;
+   }
+   to {
+     opacity: 1;
+   }
+ }
+
+ .confetti-bottom {
+   width: 100vw;
+   height: 50vh;
+   background-image: url("../images/Confetti copy 3.png");
+   background-size: 100% auto;
+   background-position: center;
+   background-repeat: no-repeat;
+   position: absolute;
+   bottom: 0;
+   animation: confetti-bottom 1s 3.4s forwards;
+   opacity: 0;
+ }
+
+ @keyframes confetti-bottom {
+   from {
+     bottom: -100%;
+   }
+   to {
+     bottom: 0;
+     opacity: 1;
+   }
+ }
+
+ .confetti-top {
+   width: 100vw;
+   height: 50vh;
+   background-image: url("../images/Confetti copy 3.png");
+   background-size: 100% auto;
+   background-position: center;
+   background-repeat: no-repeat;
+   position: absolute;
+   top: 0;
+   animation: confetti-top 1s 4s forwards;
+   opacity: 0;
+ }
+
+ @keyframes confetti-top {
+   from {
+     top: -100%;
+   }
+   to {
+     top: 0;
+     opacity: 1;
+   }
+ }
+
+ .banner-right {
+   opacity: 0;
+   width: 100vw;
+   height: 100vh;
+   background-image: url("../images/right_team.png");
+   /* background-position: center; */
+   background-repeat: no-repeat;
+   animation: team-right-appear 3s 5s forwards, team-right-disappear 2s 12s forwards;
+   position: absolute;
+   top: 0;
+   z-index: 1;
+   background-size: 100% auto;
+ }
+
+ @keyframes team-right-appear {
+   from {
+     right: -100vw;
+   }
+   to {
+     right: 0;
+     opacity: 1;
+   }
+ }
+
+ @keyframes team-right-disappear {
+   from {
+     right: 0;
+   }
+   to {
+     right: -100vw;
+   }
+ }
+
+ .banner-left {
+   width: 100vw;
+   height: 100vh;
+   background-image: url("../images/left_team.png");
+   background-position: center;
+   background-repeat: no-repeat;
+   position: absolute;
+   top: 0;
+   animation: team-left-appear 3s 5s forwards, team-left-disappear 2s 12s forwards;
+   opacity: 0;
+   z-index: 1;
+   background-size: 100% auto;
+ }
+
+ @keyframes team-left-appear {
+   from {
+     left: -100%;
+   }
+   to {
+     left: 0;
+     opacity: 1;
+   }
+ }
+
+ @keyframes team-left-disappear {
+   from {
+     left: 0;
+   }
+   to {
+     left: -100%;
+   }
+ }
+
+ .text {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   color: white;
+   font-family: 'DINNextLTPro-Heavy', sans-serif;
+   line-height: 0.9;
+   text-align: center;
+   z-index: 1;
+   text-shadow: 10px 10px 35px black;
+ }
+
+ .text p {
+   opacity: 0;
+   margin: 0;
+   text-transform: uppercase;
+ }
+
+ .text p:nth-child(1) {
+   font-size: 200px;
+   animation: show-text 0.5s 9s forwards, text-gone 0.3s 12s forwards;
+ }
+
+ .text p:nth-child(2) {
+   font-size: 140px;
+   animation: show-text 0.5s 9.5s forwards, text-gone 0.3s 12s forwards;
+ }
+
+ .text p:nth-child(3) {
+   font-size: 80px;
+   animation: show-text 0.5s 10s forwards, text-gone 0.3s 12s forwards;
+ }
+
+ @keyframes show-text {
+   to {
+     opacity: 1;
+   }
+ }
+
+ @keyframes text-gone {
+   from {
+     opacity: 1;
+   }
+   to {
+     opacity: 0;
+   }
+ }
+
+ .logo_right-team {
+   background-image: url("../images/right team logo.png");
+   background-position: center;
+   background-size: contain;
+   width: 300px;
+   height: 300px;
+   position: absolute;
+   top: 50%;
+   right: 5vw;
+   transform: translateY(-50%);
+   animation: scale-logos 2s 10s forwards, right-logo-ends 1s 12s forwards;
+   opacity: 0;
+   z-index: 1;
+ }
+
+ @keyframes right-logo-ends {
+   from {
+     right: 5vw;
+   }
+   to {
+     right: -100vw;
+   }
+ }
+
+ @keyframes scale-logos {
+   from {
+     transform: translateY(-50%) scale(2);
+     opacity: 0.5;
+   }
+   to {
+     transform: translateY(-50%) scale(1);
+     opacity: 1;
+   }
+ }
+
+ .logo_left-team {
+   background-image: url("../images/left team logo.png");
+   background-position: center;
+   background-size: contain;
+   width: 300px;
+   height: 300px;
+   position: absolute;
+   top: 50%;
+   left: 5vw;
+   transform: translateY(-50%);
+   animation: scale-logos 2s 10s forwards, left-logo-ends 1s 12s forwards;
+   opacity: 0;
+   z-index: 1;
+ }
+
+ @keyframes left-logo-ends {
+   from {
+     left: 5vw;
+   }
+   to {
+     left: -100vw;
+   }
+ }
+
+ @keyframes scale-logos {
+   from {
+     transform: translateY(-50%) scale(2);
+     opacity: 0.5;
+   }
+   to {
+     transform: translateY(-50%) scale(1);
+     opacity: 1;
+   }
+ }
+
+ .second-section {
+   background-image: url("../images/ff-background.png");
+   background-repeat: no-repeat;
+   width: 100vw;
+   height: 100vh;
+   background-size: 100% auto;
+   opacity: 0;
+   position: absolute;
+   top: 0;
+   left: 0;
+   animation: display-final-page 0.1s 8s forwards;
+ }
+
+ @keyframes display-final-page {
+   to {
+     opacity: 1;
+   }
+ }
+
+ .second-rectangle {
+   background-image: url("../images/ff-rectangle.png");
+   width: 100vw;
+   height: 100vh;
+   position: absolute;
+   background-size: 100% auto;
+   left: -40vw;
+ }
+
+ .text_second-section {
+   background-color: white;
+   width: max-content;
+   height: 50px;
+   font-family: 'DINNextLTPro-Heavy', sans-serif;
+   font-size: 50px;
+   text-align: center;
+   text-transform: uppercase;
+   top: 2vh;
+   left: 1vw;
+   text-align: center;
+   position: relative;
+   z-index: 1;
+   margin-bottom: 0.5vw;
+ }
+
+ .date_image {
+   position: relative;
+   left: 1vw;
+   top: 4vh;
+   width: 25vw;
+   z-index: 1;
+ }
+
+ .cup_image {
+   position: absolute;
+   left: 1vw;
+   bottom: 4vh;
+   width: 20vw;
+   z-index: 1;
+ }
+
+ .watch_button {
+   position: absolute;
+   right: 18vw;
+   top: 14vh;
+   width: 5vw;
+   cursor: pointer;
+   z-index: 1;
+ }
+
+ .button-text {
+   position: absolute;
+   right: 14%;
+   top: 27%;
+   transform: translateX(-25%);
+   text-transform: uppercase;
+   color: white;
+   font-family: 'DINNextLTPro-Heavy', sans-serif;
+ }
+
+ .video {
+   position: absolute;
+   width: 700px;
+   height: 600px;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   display: none;
+   z-index: 1;
+ }
+
+ .video-dimmer {
+   width: 100vw;
+   height: 100vh;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background-color: black;
+   opacity: 0.5;
+   display: none;
+ }
+
+ .play-button {
+   height: 70px;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   display: none;
+   cursor: pointer;
+   z-index: 999;
+ }
